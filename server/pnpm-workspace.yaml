@@ -1,0 +1,5 @@
+onlyBuiltDependencies:
+  - msgpackr-extract
+  - onnxruntime-node
+  - protobufjs
+  - sharp

@@ -1,0 +1,47 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "dev:worker": "nodemon worker.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^1.4.0",
+    "@langchain/community": "^0.3.40",
+    "@langchain/core": "^0.3.44",
+    "@langchain/openai": "^0.5.5",
+    "@langchain/qdrant": "^0.1.2",
+    "@langchain/textsplitters": "^0.1.0",
+    "@xenova/transformers": "^2.17.2",
+    "bullmq": "^5.49.0",
+    "community": "^0.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "4.x",
+    "huggingface": "^1.4.0",
+    "langchain": "^0.3.27",
+    "multer": "1.4.5-lts.2",
+    "openai": "^4.94.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@huggingface/inference": "^2.8.1",
+    "@types/express": "4.x",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.14.1",
+    "nodemon": "^3.1.10",
+    "qdrant-client": "^0.0.1"
+  },
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
+  "peerDependencies": {
+    "@huggingface/inference": "^2.8.1",
+    "qdrant-client": "^0.0.1"
+  }
+}
+
