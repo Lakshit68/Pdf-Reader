@@ -29,7 +29,7 @@ async function processPDFandStoreInQdrant(pdfPath) {
   });
 
   await QdrantVectorStore.fromDocuments(splitDocs, embeddings, {
-    url: 'http://localhost:6333',
+    url: process.env.qdrant_url,
     collectionName: 'langchainjs-testing', // make sure this matches the collection you retrieve from later
   });
 
@@ -38,8 +38,8 @@ async function processPDFandStoreInQdrant(pdfPath) {
 
 const queue = new Queue('file-upload-queue', {
   connection: {
-    host: 'localhost',
-    port: 6379,
+    host: process.env.valkey_host,
+    port: process.env.valkey_port,
   },
 });
 
@@ -92,7 +92,7 @@ app.post('/chat', async (req, res) => {
   console.log("got embeddings");
 
   const vectorStore = await QdrantVectorStore.fromExistingCollection(embeddings, {
-    url: 'http://localhost:6333',
+    url: process.env.qdrant_url,
     collectionName: 'langchainjs-testing',
   });
   console.log("got vector store");
