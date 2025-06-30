@@ -27,7 +27,7 @@ const ChatComponent: React.FC = () => {
 
   const handleSendChatMessage = async () => {
     setMessages((prev) => [...prev, { role: 'user', content: message }]);
-    const res = await fetch('https://pdf-reader-1-b218.onrender.com/chat', {
+    const res = await fetch('https://pdf-reader-1-b218.onrender.com', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
