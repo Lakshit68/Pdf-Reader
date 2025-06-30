@@ -14,7 +14,7 @@ const FileUploadComponent: React.FC = () => {
           const formData = new FormData();
           formData.append('pdf', file);
 
-          await fetch('http://localhost:8080/upload/pdf', {
+          await fetch('https://pdf-reader-1-b218.onrender.com/upload/pdf', {
             method: 'POST',
             body: formData,
           });
