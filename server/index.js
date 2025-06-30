@@ -30,6 +30,7 @@ async function processPDFandStoreInQdrant(pdfPath) {
 
   await QdrantVectorStore.fromDocuments(splitDocs, embeddings, {
     url: process.env.qdrant_url,
+    apiKey:process.env.qdrant_apikey,
     collectionName: 'langchainjs-testing', // make sure this matches the collection you retrieve from later
   });
 
